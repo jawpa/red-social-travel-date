@@ -13,12 +13,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Login Travel-date.com</title>
 
     <!-- Bootstrap core CSS -->
     <!-- Latest compiled and minified CSS -->
@@ -78,6 +75,8 @@
           if ($usuario = $row['usuario'] && $contrasena = $row['contrasena']) {
             $_SESSION['usuario'] = $row['usuario'];
             $_SESSION['id_usuario'] = $row['id_usuario'];
+            $_SESSION['avatar'] = $row['avatar'];
+            $_SESSION['fecha_reg'] = $row['fecha_reg'];
             header('Location:index.php');
           }
         }
